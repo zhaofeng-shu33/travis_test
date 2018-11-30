@@ -1,0 +1,13 @@
+os: linux
+branches:
+  only:
+    - master
+script:
+  - git config --add user.name "zhaofeng-shu33"
+  - git config --add user.email "616545598@qq.com"
+  - echo "Arch " >> README.md
+  - git add *
+  - git commit -m "add arch"
+  - git config --global credential.helper store
+  - echo "https://$($access_token):x-oauth-basic@github.com`n" >> $HOME\.git-credentials
+  - git push origin develop
