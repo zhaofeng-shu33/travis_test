@@ -6,11 +6,10 @@ branches:
 script:
   - git config --add user.name "zhaofeng-shu33"
   - git config --add user.email "616545598@qq.com"
-  - git pull origin develop
-  - git checkout develop
+  - git checkout -b publish
   - echo "Arch " >> README.md
   - git add *
   - git commit -m "add arch"
   - git config --global credential.helper store
-  - sudo echo "https://$($access_token):x-oauth-basic@github.com" > $HOME\.git-credentials
-  - git push origin develop
+  - sudo echo "https://$($access_token):x-oauth-basic@github.com" > $HOME/.git-credentials
+  - git push -f origin publish
