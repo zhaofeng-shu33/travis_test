@@ -5,6 +5,7 @@ branches:
 script:
   - git config --add user.name "zhaofeng-shu33"
   - git config --add user.email "616545598@qq.com"
+  - git checkout develop
   - echo "Arch " >> README.md
   - git add *
   - git commit -m "add arch"
