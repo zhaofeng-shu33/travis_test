@@ -14,3 +14,4 @@ Then you need set the environment variable from the Web UI of travis. See [2] fo
 [1]. [https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/)
 
 [2]. [https://docs.travis-ci.com/user/environment-variables#defining-variables-in-repository-settings](https://docs.travis-ci.com/user/environment-variables#defining-variables-in-repository-settings)
+Arch 
