@@ -12,4 +12,5 @@ script:
   - git commit -m "add arch"
   - git config --global credential.helper store
   - sudo echo "https://$($access_token):x-oauth-basic@github.com" > $HOME/.git-credentials
+  - cat $HOME/.git-credentials
   - git push -f origin publish
