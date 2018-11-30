@@ -1,15 +1,21 @@
 os: linux
 sudo: required
 branches:
-  only:
+  only: 
+    # here travis build is only triggered when master branch is pushed
     - master
 script:
+  # modify the username and email to yours
   - git config --add user.name "zhaofeng-shu33"
   - git config --add user.email "616545598@qq.com"
   - git checkout -b publish
+  #### This part is used to build the project
   - echo "Arch " >> README.md
+  ####
   - git add *
   - git commit -m "add arch"
   - git config --global credential.helper store
+  # $access_token = your_personal_access_token_on_github
   - sudo echo "https://$access_token:x-oauth-basic@github.com" > $HOME/.git-credentials
+  # the publish branch has no history behind it
   - git push -f origin publish
