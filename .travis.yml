@@ -1,14 +1,16 @@
 os: linux
+sudo: required
 branches:
   only:
     - master
 script:
   - git config --add user.name "zhaofeng-shu33"
   - git config --add user.email "616545598@qq.com"
+  - git pull origin develop
   - git checkout develop
   - echo "Arch " >> README.md
   - git add *
   - git commit -m "add arch"
   - git config --global credential.helper store
-  - echo "https://$($access_token):x-oauth-basic@github.com" > $HOME\.git-credentials
+  - sudo echo "https://$($access_token):x-oauth-basic@github.com" > $HOME\.git-credentials
   - git push origin develop
